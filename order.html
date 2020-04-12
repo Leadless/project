@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apple - Order</title>
+	<link rel="icon" type="image/png" href="images/applelogo.png" sizes="32x32" />
+	<link rel="stylesheet" type="text/css" href="ordercss.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=LHevPa4QxzJCy0wLxUge-75Czux4nIIUhk5ZwP4sWiveczuW6P4OX2qke0tYadDwA0Q_AIO3bkENrp9LyESIsQ" charset="UTF-8"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="dropdown">
+			<button class="dropbtn">Product</button>
+			<div class="dropdown-content">
+				<a href="index.html">iPhone 11</a>
+				<a href="index.html">iPhone 11 Pro</a>
+			</div>
+		</div>
+		<a href="index.html"><img class="logo" src="images/applelogo.png"></a>
+		<a href="order.html">Buy Now</a>
+	</div>
+
+	<div id="container">
+		</br>
+		<img src="images/iphone.jpg">
+		</br>
+		</br>
+		</br>
+
+		<script>
+			function name(){
+				var name = document.getElementById('name');
+				var namee = name.value.length;
+				if(namee === 0){
+					alert('Please fill in all the columns.');
+					return false;
+				}else{
+					return true;
+				}
+			}
+
+			function phonenumber(){
+				var phnum = document.getElementById('phonenumber');
+				var phnumm = phnum.value.length;
+				if(phnumm === 0){
+					alert('Please fill in all the columns.');
+					return false;
+				}else{
+					return true;
+				}	
+			}
+
+			function address(){
+				var add = document.getElementById('address');
+				var addd = add.value.length;
+				if(addd === 0){
+					alert('Please fill in all the columns.');
+					return false;
+				}else{
+					return true;
+				}	
+			}
+
+			function quantity(){
+				var q = document.getElementById('quantity');
+				var qq = q.value.length;
+				if(qq === 0){
+					alert('Please fill in all the columns.');
+					return false;
+				}else{
+					return true;
+				}
+			}
+
+			function showresult(){
+				if (name()){
+					if (phonenumber()) {
+						if (address()) {
+							if (quantity()) {
+								alert('Submitted! Please wait for further updates, we will get back to you soon. Thank you.')
+								window.location.reload();
+							}
+						}
+					}
+				}
+				return false;
+			}
+		</script>
+
+		<div class="form">
+			<div class="formcontent">
+				<label>Name</label></br>
+				<input type="text" name="Name" id="name" required>
+				</br><label>Contact Number</label></br>
+				<input type="text" name="phoneNumber" id="phonenumber" required>
+				</br><label>Shipping Address</label></br>
+				<input type="text" name="Address" id="address" required>
+				</br><label>Model</label></br>
+				<select>
+					<option>iPhone 11</option>
+					<option>iPhone 11 Pro</option>
+					<option>iPhone 11 Pro Max</option>
+				</select>
+				</br><label>Quantity</label></br>
+				<input type="number" name="Quantity" id="quantity" required>
+				</br>
+				<input type="submit" class="button" onclick="showresult()" value="Submit">
+			</div>
+		</div>
+	</div>
+	
+	</br>
+	</br>
+	</br>
+	
+	<footer>
+		Copyright © 2020 Apple Inc. All rights reserved.
+	</footer>
+</body>
+</html>
